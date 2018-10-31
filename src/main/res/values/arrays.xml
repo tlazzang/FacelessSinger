@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="songType">
+        <item>국내가요</item>
+        <item>팝송</item>
+        <item>랩</item>
+    </string-array>
+
+    <string-array name="rankBy">
+        <item>누적 점수</item>
+        <item>평균 점수</item>
+    </string-array>
+</resources>

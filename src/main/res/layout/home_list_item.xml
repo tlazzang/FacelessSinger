@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_margin="8dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        card_view:cardElevation="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/homeListItem_layout_userInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/homeListItem_iv_img"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/faceless"/>
+
+                <TextView
+                    android:id="@+id/homeListItem_tv_nickName"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/homeListItem_iv_img"
+                    android:layout_marginLeft="8dp"
+                    android:text="논현동가왕"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="4dp"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:layout_below="@id/homeListItem_layout_userInfo"
+                android:id="@+id/mediaplayer_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardElevation="3dp"
+                android:transitionName="open_mediaplayer">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/homeListItem_tv_singerTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginBottom="7dp"
+                        android:text="file_name.mp4"
+                        android:textSize="18sp"
+                        android:fontFamily="sans-serif-condensed"/>
+
+                    <SeekBar
+                        android:id="@+id/homeListItem_seekbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/homeListItem_tv_current_progress"
+                            android:text="00:00"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true" />
+
+                        <android.support.design.widget.FloatingActionButton
+                            android:id="@+id/homeListItem_fab_play"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/play_white"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="10dp" />
+
+                        <TextView
+                            android:id="@+id/homeListItem_tv_file_length"
+                            android:text="00:00"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/homeListItem_layout_icon"
+                android:layout_below="@+id/mediaplayer_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:padding="4dp"
+                    android:id="@+id/homeListItem_iv_star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/star_border_black"/>
+                <ImageView
+                    android:padding="4dp"
+                    android:id="@+id/homeListItem_iv_comment"
+                    android:layout_toRightOf="@+id/homeListItem_iv_star"
+                    android:src="@drawable/comment_outline_black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/homeListItem_tv_averagePosition"
+                    android:layout_below="@+id/homeListItem_iv_star"
+                    android:text="평균평점 "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/homeListItem_tv_averageScore"
+                    android:layout_marginLeft="4dp"
+                    android:text="5.0"
+                    android:layout_toRightOf="@id/homeListItem_tv_averagePosition"
+                    android:layout_below="@+id/homeListItem_iv_star"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/homeListItem_tv_viewCountPosition"
+                    android:text="조회수"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/homeListItem_tv_averagePosition"/>
+                <TextView
+                    android:id="@+id/homeListItem_tv_viewCount"
+                    android:layout_below="@id/homeListItem_tv_averagePosition"
+                    android:layout_toRightOf="@+id/homeListItem_tv_viewCountPosition"
+                    android:layout_marginLeft="4dp"
+                    android:text="150"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/homeListItem_tv_commentCountPosition"
+                    android:text="댓글수"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/homeListItem_tv_viewCountPosition"/>
+                <TextView
+                    android:id="@+id/homeListItem_tv_commentCount"
+                    android:layout_below="@id/homeListItem_tv_viewCountPosition"
+                    android:layout_toRightOf="@+id/homeListItem_tv_commentCountPosition"
+                    android:layout_marginLeft="4dp"
+                    android:text="10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "281661422039",
+    "firebase_url": "https://homesinger-6d63d.firebaseio.com",
+    "project_id": "homesinger-6d63d",
+    "storage_bucket": "homesinger-6d63d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:281661422039:android:ed95aca7db858cbd",
+        "android_client_info": {
+          "package_name": "com.facelesssinger.shim.homesinger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "281661422039-g1nb3jggmsoihtmgdi1obvvsh996prag.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdvo2eyjJJyVavCOz2gmWQzWlTwdlXRWM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

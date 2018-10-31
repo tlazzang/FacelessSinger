@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    tools:context=".EvaluateActivity">
+
+    <RelativeLayout
+        android:id="@+id/evaluate_layout_songInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/evaluate_iv_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/audio_white"
+            android:background="@color/colorAccent"/>
+
+        <TextView
+            android:layout_marginLeft="4dp"
+            android:textStyle="bold"
+            
+            android:id="@+id/evaluate_tv_nickName"
+            android:layout_toRightOf="@id/evaluate_iv_img"
+            android:text="논현동가왕"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginLeft="4dp"
+            android:id="@+id/evaluate_tv_singerTitle"
+            android:layout_toRightOf="@id/evaluate_iv_img"
+            android:layout_below="@id/evaluate_tv_nickName"
+            android:text="김범수 - 보고싶다"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <RelativeLayout
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_toLeftOf="@id/evaluate_tv_averageScore"
+                android:id="@+id/evaluate_iv_star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_star_rate_black_24dp"/>
+
+            <TextView
+                android:id="@+id/evaluate_tv_averageScore"
+                android:layout_alignParentRight="true"
+                android:text="5.0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:layout_toLeftOf="@id/evaluate_tv_viewCount"
+                android:layout_below="@+id/evaluate_iv_star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_visibility_black_24dp"/>
+            <TextView
+                android:id="@+id/evaluate_tv_viewCount"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/evaluate_iv_star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12"/>
+        </RelativeLayout>
+        
+    </RelativeLayout>
+
+    <Button
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/evaluate_layout_songInfo"
+        android:id="@+id/evaluate_btn_follow"
+        android:text="팔로우"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginBottom="8dp"/>
+
+    <ImageView
+        android:layout_marginTop="8dp"
+        android:id="@+id/evaluate_iv_delete"
+        android:src="@drawable/baseline_delete_forever_white_18dp"
+        android:background="@color/colorPrimary"
+        android:layout_below="@id/evaluate_layout_songInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"/>
+
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/evaluate_btn_play"
+        android:layout_above="@id/evaluate_layout_evaluate"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/play_circle_white"/>
+    
+    <RelativeLayout
+        android:id="@+id/evaluate_layout_inputComments"
+        android:layout_below="@id/evaluate_btn_follow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/evaluate_et_comments"
+            android:layout_toLeftOf="@id/evaluate_iv_commentSend"
+            android:hint="댓글을 입력해주세요 :)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        
+        <ImageView
+            android:id="@+id/evaluate_iv_commentSend"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/send_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        
+    </RelativeLayout>
+    
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/evaluate_recyclerView_comments"
+        android:layout_below="@id/evaluate_layout_inputComments"
+        android:layout_above="@+id/evaluate_layout_evaluate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+    </android.support.v7.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/evaluate_layout_evaluate"
+
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:color/holo_orange_light">
+
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/star_border_white"/>
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:text="평가하기"
+            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/evaluate_layout_evaluateCompleted"
+        android:visibility="invisible"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:color/holo_orange_light">
+
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/star_border_white"/>
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:text="이미 평가하셨습니다."
+            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/evaluate_progressBar"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"/>
+
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <RatingBar
+        android:layout_gravity="center"
+        android:id="@+id/ratingDialog_ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:isIndicator="false"
+        android:numStars="5"
+        android:stepSize="0.5"
+        android:rating="1.0"
+        android:progressTint="@android:color/holo_orange_light"
+        android:secondaryProgressTint="@android:color/holo_orange_light">
+
+    </RatingBar>
+
+
+</LinearLayout>

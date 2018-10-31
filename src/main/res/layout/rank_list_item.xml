@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_margin="6dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_centerVertical="true"
+        android:textColor="@android:color/holo_red_light"
+        android:id="@+id/rankListItem_tv_rank"
+        android:text="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/rankListItem_iv_img"
+        android:layout_toRightOf="@id/rankListItem_tv_rank"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/faceless"/>
+
+    <TextView
+        android:layout_centerVertical="true"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginLeft="8dp"
+        android:id="@+id/rankListItem_tv_nickName"
+        android:layout_toRightOf="@id/rankListItem_iv_img"
+        android:text="논현동가왕"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_centerVertical="true"
+        android:text="12500"
+        android:textColor="@android:color/holo_orange_light"
+        android:layout_toLeftOf="@id/rankListItem_iv_star"
+        android:id="@+id/rankListItem_tv_totalScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+
+        android:layout_centerVertical="true"
+        android:text="5.0"
+        android:textColor="@android:color/holo_orange_light"
+        android:layout_toLeftOf="@id/rankListItem_iv_star"
+        android:id="@+id/rankListItem_tv_averageScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        />
+
+    <ImageView
+        android:layout_centerVertical="true"
+        android:id="@+id/rankListItem_iv_star"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/baseline_star_rate_black_24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_marginTop="2dp"
+        android:layout_below="@+id/rankListItem_iv_img"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#a3a3a3"/>
+
+
+</RelativeLayout>

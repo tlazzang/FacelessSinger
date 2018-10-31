@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="8dp"
+    tools:context=".UploadActivity">
+
+
+    <TextView
+        android:text="노래 정보"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/upload_et_originalSongTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="원곡 제목"/>
+
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/upload_et_originalSinger"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="원곡 가수"/>
+
+
+    <TextView
+        android:text="노래 장르"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Spinner
+        android:id="@+id/upload_spinner_songType"
+        android:autofillHints="노래 장르를 선택하세요."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/songType">
+
+    </Spinner>
+
+    <ImageView
+        android:id="@+id/upload_iv_upload"
+        android:layout_marginTop="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/upload_black"
+        android:layout_gravity="center_horizontal" />
+
+    <ProgressBar
+        android:id="@+id/upload_progressBar"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"/>
+
+
+</LinearLayout>
